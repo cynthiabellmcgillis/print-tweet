@@ -22,5 +22,40 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-mono), monospace;
+}
+
+@page {
+  margin-top: 3cm;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-area {
+    padding: 0;
+    margin-top: 3rem;
+  }
+
+  .tweet-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    break-inside: avoid;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
