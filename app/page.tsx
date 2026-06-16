@@ -200,7 +200,7 @@ export default function Home() {
               <div
                 key={print.id}
                 className="border border-gray-100 rounded-xl p-4 hover:border-gray-200 transition-colors cursor-pointer"
-                onClick={() => setUrl(`https://x.com/${print.author_handle}/status/${print.tweet_id}`)}
+                onClick={() => window.open(`https://x.com/${print.author_handle}/status/${print.tweet_id}`, '_blank')}
               >
                 <div className="flex items-center gap-2 mb-2">
                   <Image
